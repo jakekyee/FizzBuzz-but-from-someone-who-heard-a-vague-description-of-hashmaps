@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <link rel="stylesheet" href="stylesheet.css">
+        <!--no idea what the difference between id and class is so i just slapped them both on-->
+        <script src="" class = "searchfunction" id = "searchfunction"></script>
+        <script src="script.js"></script>
+        
+
+        
+        <title>Fizz,Buzz, or FizzBuzz?</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+    
+    </head>
+    <body>
+        
+
+        <header>
+
+            <div class="container">
+            </div>
+            <h1>index  </h1>
+        </header>
+
+        <div class ="middle" style="background-color:#333333;">
+      
+        <div class ="titlecontainer">  
+
+        <h1>fizz, buzz, or both?</h1>
+        </div>
+             <div class ="container">  
+            
+
+            <p>Check if a number is Fizz, Buzz, or FizzBuzz</p>
+            
+            </div>
+            <div class = "search">
+                <div class = "searchbar">
+                    <input type="text "autocapitalize="off" autocorrect="off" placeholder="Enter Numbers Here" id = "nameentry" onkeydown = "if (event.keyCode == 13)                      document.getElementById('searchbutton').click()" maxlength="7"></input>
+                    <button id = "searchbutton" onclick = "do_everything()">
+                    <p>
+                    Go!    
+                    </p>
+                    </button>
+               </div> 
+               <br>
+            </div>
+            <div class = "results">
+            <div class = "fizzbuzz" id = "fizzbuzz">
+            <br>
+            <h1>
+            FIzzbuzz!
+            </h1>
+            <br>
+            <p>
+            This number is divisible by both 3 and 5!
+            </p>
+            </div>
+            <div class = "fizz" id = "fizz">
+            <br>
+            <h1>
+            Fizz!
+            </h1>
+            <br>
+            <p>
+            This number is divisible by 3, but not 5
+            </p>
+            </div>
+            <div class = "buzz" id = "buzz">
+            <br>
+            <h1>
+            Buzz!
+            </h1>
+            <br>
+            <p>
+            This number is divisible by 5, but not 3.
+            </p>
+            </div>
+            <div class = "offlist" id = "offlist">
+            <br>
+            <h1>
+            Nope.
+            </h1>
+            <br>
+            <p>
+            This number is not divisible by 3, 5, or 3 and 5.
+            </p>
+            </div>
+            </div>
+        </div>
+        <footer>
+        <div class ="container">
+        </div>   
+          
+        </footer>
+    </body>
+    <script>
+    //this stuff needs to load after everyyhing else, so I just copy pasted it here
+    var input = document.getElementById("searchbutton");
+
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+
+    event.preventDefault();
+    document.getElementById("searchbutton").click();
+  }
+});
+    </script>
+</html>
